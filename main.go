@@ -58,4 +58,14 @@ func main() {
 	} else {
 		fmt.Println("Ou. Well... Let's work for the 5 or higher next time.")
 	}
+
+	grade = 6
+	if grade >= 5 {
+        fmt.Printf("Your grade is 5 or higher: %d", grade)
+		if grade > 5 {
+            fmt.Printf("Your grade higher then 5:  %d", grade)
+		}
+	} else {
+        fmt.Printf("Your grade is lower than 5: %d", grade)
+	}
 }
