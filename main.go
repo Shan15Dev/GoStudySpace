@@ -74,8 +74,8 @@ func main() {
 	}
 
 	grade = 7
-    // Switch-Case switch
-    // Can only be one datatype. SO I cannot put a number in the first case and a string in the second case.
+	// Switch-Case switch
+	// Can only be one datatype. SO I cannot put a number in the first case and a string in the second case.
 	switch grade {
 	case 1:
 		fmt.Println("Your grade is", grade)
@@ -94,15 +94,54 @@ func main() {
 		fmt.Println("Your grade is over the number 6. Your input was:", grade)
 	}
 
-    // Multi-case switch
+	// Multi-case switch
 
-    day := 4
-    switch day{
-    case 1, 2, 3, 4, 5:
-        fmt.Println("It is a weekday")
-    case 6, 7:
-        fmt.Println("It is WEEKEND :)")
-    default:
-        fmt.Println("After Sunday, there is Monday. There is no", day, "th day")
-    }
+	day := 4
+	switch day {
+	case 1, 2, 3, 4, 5:
+		fmt.Println("It is a weekday")
+	case 6, 7:
+		fmt.Println("It is WEEKEND :)")
+	default:
+		fmt.Println("After Sunday, there is Monday. There is no", day, "th day")
+	}
+
+	// For loops with continue / break
+	for i := 0; i < 10; i++ {
+		if i == 8 {
+			continue
+		}
+		fmt.Println(i)
+	}
+	fmt.Println()
+	for i := 0; i < 10; i++ {
+		if i == 4 {
+			break
+		}
+		fmt.Println(i)
+	}
+	// Nested Loops W3Schools
+	adj := [2]string{"big", "tasty"}
+	fruits := [3]string{"apple", "orange", "banana"}
+	for i := 0; i < len(adj); i++ {
+		for j := 0; j < len(fruits); j++ {
+			fmt.Println(adj[i], fruits[j])
+		}
+	}
+
+	// Range loop
+	for index, value := range fruits {
+		fmt.Println(index, value)
+	}
+	fmt.Println()
+
+	// Range loop without index
+	for _, value := range fruits {
+		fmt.Println(value)
+	}
+    fmt.Println()
+    // Range loop without value
+	for index, _ := range fruits {
+		fmt.Println(index)
+	}
 }
