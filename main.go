@@ -47,8 +47,15 @@ func main() {
 	fmt.Println(cars[3])
 
 	var carsMake = make([]string, 0, 10)
-    carsMake = append(carsMake, "Test")
-    fmt.Println(len(carsMake))
+	carsMake = append(carsMake, "Test")
+	fmt.Println(len(carsMake))
 	fmt.Println(cap(carsMake))
 	fmt.Println(carsMake)
+
+	grade := 5
+	if grade > 5 {
+		fmt.Println("WOW. You got over a 5")
+	} else {
+		fmt.Println("Ou. Well... Let's work for the 5 or higher next time.")
+	}
 }
