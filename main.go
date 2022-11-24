@@ -139,9 +139,92 @@ func main() {
 	for _, value := range fruits {
 		fmt.Println(value)
 	}
-    fmt.Println()
-    // Range loop without value
+	fmt.Println()
+	// Range loop without value
 	for index, _ := range fruits {
 		fmt.Println(index)
 	}
+
+	// Functions
+	myMessage()
+
+	myMessage()
+	myMessage()
+	myMessage()
+
+	// Functins mit Parametern
+	greeting("Shan")
+	// Functions mit mehreren Parametern
+	greetingWithSurname("Shan", "Dev")
+
+	// Function with return
+	fmt.Println(greetingReturn("Shan2"))
+
+	// named return Values
+	fmt.Println(greetingWithSurnameReturn("Shan2", "Dev2"))
+
+	// mutliple return values
+	fmt.Println(myFunction(5, "Hello"))
+
+	// Save it into multiple variables
+	a, b := myFunction(5, "Hello")
+	fmt.Println(a, b)
+
+	// Just save one of the variables
+	_, c := myFunction(5, "Hello")
+	fmt.Println(c)
+
+	// Recursion
+	// is when a function calls itself
+	count(1)
+
+	// Example
+	fmt.Println()
+	fmt.Println(factorial_recursion(4))
+}
+
+func factorial_recursion(i float64) (y float64) {
+	if i > 0 {
+		y = i * factorial_recursion(i-1)
+	} else {
+		y = 1
+	}
+
+	return
+}
+
+func count(i int) int {
+	if i == 11 {
+		return 0
+	}
+	fmt.Println(i)
+	// cals itself. Common for mathematical and programming concepts
+	return count(i + 1)
+}
+
+func myMessage() {
+	fmt.Println("HELLLOOOO this is a function")
+}
+
+func greeting(name string) {
+	fmt.Println("Hello", name)
+}
+
+func greetingWithSurname(firstname string, lastname string) {
+	fmt.Println("Hello", firstname, lastname)
+}
+func greetingWithSurnameReturn(firstname string, lastname string) (result string) {
+	result = "Hello " + firstname + " " + lastname
+	// go will automatically return the value "result"
+	return
+}
+
+func greetingReturn(name string) string {
+	return "Hello " + name
+}
+
+func myFunction(x int, y string) (result int, txt1 string) {
+	result = x + x
+	txt1 = y + " World!"
+	return
 }
