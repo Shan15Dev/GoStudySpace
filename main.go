@@ -22,7 +22,7 @@ func main() {
         fmt.Println("Two")
 
     }
-
+s
     array := [5]int{4, 5, 6, 7, 8}
 
     // Itterate through list
